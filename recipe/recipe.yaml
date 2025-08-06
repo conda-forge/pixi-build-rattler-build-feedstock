@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 context:
   name: pixi-build-rattler-build
-  version: "0.3.1"
+  version: "0.3.2"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/prefix-dev/pixi-build-backends/archive/refs/tags/${{ name }}-v${{ version }}.tar.gz
-  sha256: a7771aa3083030c27531563c7635f8a4cb7b42f339689c815d7c8c58e348e4bd
+  sha256: a53c7c5d96306ef1a182012bbd7d3cd1e03d5a1031a4a09f237b5b58439b7d51
 
 build:
   number: 0
