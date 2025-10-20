@@ -12,7 +12,7 @@ source:
   sha256: 889c0c5a7cab676afb76d3aa6e9e2801bdd41e46d991049d21fedd695a3e151b
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -40,12 +40,11 @@ build:
 requirements:
   build:
     - ${{ compiler("rust") }}
+    - ${{ stdlib("c") }}
     - cargo-bundle-licenses
     - cargo-auditable
   host:
     - pkg-config
-    - libzlib
-    - liblzma
     - if: unix
       then: openssl
   run:
