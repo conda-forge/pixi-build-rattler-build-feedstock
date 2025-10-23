@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 context:
   name: pixi-build-rattler-build
-  version: "0.3.3"
+  version: "0.3.4"
 
 package:
   name: ${{ name }}
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/prefix-dev/pixi-build-backends/archive/refs/tags/${{ name }}-v${{ version }}.tar.gz
-  sha256: 889c0c5a7cab676afb76d3aa6e9e2801bdd41e46d991049d21fedd695a3e151b
+  sha256: 87b6f7d1e592a352ae7079a29510d94fb80e74f7c3b9978c88591f7bc956db9d
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -31,7 +31,7 @@ build:
         then:
           - set CARGO_HOME=C:\.cargo
           - md %CARGO_HOME%
-      - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path crates/${{ name }}
+      - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path crates/${{ name }} --no-default-features --features native-tls
       - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
   files:
     - bin/${{ name }}
