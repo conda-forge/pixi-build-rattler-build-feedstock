@@ -1,15 +1,16 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 context:
   name: pixi-build-rattler-build
-  version: "0.3.7"
+  crate_name: pixi_build_rattler_build
+  version: "0.3.8"
 
 package:
   name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/prefix-dev/pixi-build-backends/archive/refs/tags/${{ name }}-v${{ version }}.tar.gz
-  sha256: 577c9bd61e2f0619700c4088d47d706b40399efded0cb299abe18bd8001e8c06
+  url: https://github.com/prefix-dev/pixi/archive/refs/tags/${{ name }}-v${{ version }}.tar.gz
+  sha256: d66c38fc0e09407f850adf7d2df061a4354f3cc94f9d018c4a4f09a1a68764ab
 
 build:
   number: 0
@@ -31,7 +32,7 @@ build:
         then:
           - set CARGO_HOME=C:\.cargo
           - md %CARGO_HOME%
-      - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path crates/${{ name }} --no-default-features --features native-tls
+      - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path crates/${{ crate_name }} --no-default-features --features native-tls
       - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
   files:
     - bin/${{ name }}
@@ -57,7 +58,7 @@ tests:
         - ${{ name }}
 
 about:
-  homepage: https://github.com/prefix-dev/pixi-build-backends
+  homepage: https://github.com/prefix-dev/pixi
   summary: A pixi build backend to build recipe.yaml files.
   description: |
     This package provides a build backend for pixi that allows building recipe.yaml files.
@@ -66,7 +67,7 @@ about:
     - LICENSE
     - THIRDPARTY.yml
   documentation: https://prefix-dev.github.io/pixi-build-backends
-  repository: https://github.com/prefix-dev/pixi-build-backends
+  repository: https://github.com/prefix-dev/pixi
 
 extra:
   recipe-maintainers:
