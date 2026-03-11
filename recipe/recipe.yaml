@@ -45,7 +45,7 @@ requirements:
     - cargo-bundle-licenses
     - cargo-auditable
   host:
-    - if: unix
+    - if: linux
       then:
         - openssl
   run:
