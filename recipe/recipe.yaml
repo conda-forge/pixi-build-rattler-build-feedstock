@@ -45,9 +45,9 @@ requirements:
     - cargo-bundle-licenses
     - cargo-auditable
   host:
-    - pkg-config
     - if: unix
-      then: openssl
+      then:
+        - openssl
   run:
     - pixi-build-api-version >=4,<5
 
