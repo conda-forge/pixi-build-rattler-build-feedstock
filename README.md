@@ -3,13 +3,13 @@ About pixi-build-rattler-build-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pixi-build-rattler-build-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/prefix-dev/pixi-build-backends
+Home: https://github.com/prefix-dev/pixi
 
 Package license: BSD-3-Clause
 
 Summary: A pixi build backend to build recipe.yaml files.
 
-Development: https://github.com/prefix-dev/pixi-build-backends
+Development: https://github.com/prefix-dev/pixi
 
 Documentation: https://prefix-dev.github.io/pixi-build-backends
 
@@ -65,6 +65,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26245&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pixi-build-rattler-build-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26245&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pixi-build-rattler-build-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
