@@ -2,7 +2,7 @@
 context:
   name: pixi-build-rattler-build
   crate_name: pixi_build_rattler_build
-  version: "0.3.11"
+  version: "0.3.12"
 
 package:
   name: ${{ name }}
@@ -11,7 +11,7 @@ package:
 source:
   url: https://github.com/prefix-dev/pixi/archive/refs/tags/${{ name }}-v${{ 
     version }}.tar.gz
-  sha256: 26a893f18f2d7eecf4f08ac7c56abea1b46bd09c15cb1452f6c726ea15ffc0dc
+  sha256: ac849b10ea7829d1d19b78f37ee25793db8e4bbc870157562ab4d8d2cb580a21
 
 build:
   number: 0
