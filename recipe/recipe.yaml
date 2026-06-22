@@ -2,7 +2,7 @@
 context:
   name: pixi-build-rattler-build
   crate_name: pixi_build_rattler_build
-  version: "0.4.0"
+  version: "0.4.2"
 
 package:
   name: ${{ name }}
@@ -11,10 +11,10 @@ package:
 source:
   url: https://github.com/prefix-dev/pixi/archive/refs/tags/${{ name }}-v${{ 
     version }}.tar.gz
-  sha256: 1ebcae51e2f537fe70395c0efaa90e5acb47d2421a330b77a2c25a32fccebceb
+  sha256: 7d8699d3f1d1ab33ed152390c39612ca169da98d8df68b9fde9510040bcf03d3
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       # Use cmake to build aws-lc-sys, because conda's CFLAGS inject -O2 which
