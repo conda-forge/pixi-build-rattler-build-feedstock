@@ -2,7 +2,7 @@
 context:
   name: pixi-build-rattler-build
   crate_name: pixi_build_rattler_build
-  version: "0.4.5"
+  version: "0.4.6"
 
 package:
   name: ${{ name }}
@@ -11,7 +11,7 @@ package:
 source:
   url: https://github.com/prefix-dev/pixi/archive/refs/tags/${{ name }}-v${{ 
     version }}.tar.gz
-  sha256: 7dd20f6d061b4ac3a6e997388348c48908580e92510282cf86089a646427b35a
+  sha256: ca2886b15f065596d4ae6b9e482fe91a3be746d2d5321a3ebc105d8d6190464a
 
 build:
   number: 0
@@ -64,7 +64,7 @@ requirements:
   - if: unix
     then: openssl
   run:
-  - pixi-build-api-version >=6,<7
+  - pixi-build-api-version >=7,<8
 
 tests:
 - script:
